@@ -5,10 +5,10 @@ application:
       backend: http://floppy:8000/
   public_path:
     - /
-
 services:
   floppy:
     # ghcr.io/dannyvfilms/floppy:26.8.20
+    # upstream: ghcr.io/dannyvfilms/floppy:26.8.20
     image: ghcr.1ms.run/dannyvfilms/floppy:26.8.20
     environment:
       - TZ={{.U.timezone}}
@@ -19,7 +19,6 @@ services:
       - DEBUG=False
     binds:
       - /lzcapp/var/db:/floppy/db
-
   redis:
     image: docker.1ms.run/library/redis:8-alpine
     command: redis-server --appendonly yes --save "" --maxmemory 256mb --maxmemory-policy volatile-lru
