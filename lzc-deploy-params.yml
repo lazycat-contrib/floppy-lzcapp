@@ -1,0 +1,23 @@
+params:
+  - id: timezone
+    type: string
+    name: "Timezone"
+    description: "Timezone for the application (e.g., Asia/Shanghai, Europe/Berlin)"
+    default_value: "Asia/Shanghai"
+    optional: true
+
+  - id: admin_enabled
+    type: string
+    name: "Enable Admin"
+    description: "Enable admin interface (True or False)"
+    default_value: "False"
+    optional: true
+
+locales:
+  zh:
+    timezone:
+      name: "时区"
+      description: "应用时区（例如 Asia/Shanghai、Europe/Berlin）"
+    admin_enabled:
+      name: "启用管理界面"
+      description: "是否启用管理界面（True 或 False）"

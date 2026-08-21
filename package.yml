@@ -1,0 +1,20 @@
+package: community.lazycat.app.floppy
+version: 26.8.20
+name: Floppy
+description: "Self-hosted all-in-one media tracker and Trakt alternative for movies, TV, anime, books, games, music, and podcasts."
+min_os_version: 1.5.0
+author: dannyvfilms
+license: MIT
+homepage: https://github.com/dannyvfilms/Floppy
+
+locales:
+  en:
+    name: "Floppy"
+    description: "Self-hosted all-in-one media tracker and Trakt alternative for movies, TV, anime, books, games, music, and podcasts."
+  zh:
+    name: "Floppy"
+    description: "自托管的全能媒体追踪器，Trakt 替代品，支持电影、电视、动漫、书籍、游戏、音乐和播客。"
+
+permissions:
+  required:
+    - net.internet

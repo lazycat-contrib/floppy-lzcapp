@@ -1,0 +1,27 @@
+application:
+  subdomain: floppy
+  upstreams:
+    - location: /
+      backend: http://floppy:8000/
+  public_path:
+    - /
+
+services:
+  floppy:
+    # ghcr.io/dannyvfilms/floppy:26.8.20
+    image: ghcr.1ms.run/dannyvfilms/floppy:26.8.20
+    environment:
+      - TZ={{.U.timezone}}
+      - SECRET={{ stable_secret "floppy_secret" }}
+      - REDIS_URL=redis://redis:6379
+      - ADMIN_ENABLED={{.U.admin_enabled}}
+      - DEMO_ACCOUNT_ENABLED=False
+      - DEBUG=False
+    binds:
+      - /lzcapp/var/db:/floppy/db
+
+  redis:
+    image: docker.1ms.run/library/redis:8-alpine
+    command: redis-server --appendonly yes --save "" --maxmemory 256mb --maxmemory-policy volatile-lru
+    binds:
+      - /lzcapp/var/redis:/data
