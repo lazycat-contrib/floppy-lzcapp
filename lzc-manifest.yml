@@ -8,8 +8,8 @@ application:
 services:
   floppy:
     # ghcr.io/dannyvfilms/floppy:26.8.20
-    # upstream: ghcr.io/dannyvfilms/floppy:26.9.10
-    image: ghcr.1ms.run/dannyvfilms/floppy:26.9.10
+    # upstream: ghcr.io/dannyvfilms/floppy:26.9.24
+    image: ghcr.1ms.run/dannyvfilms/floppy:26.9.24
     environment:
       - TZ={{.U.timezone}}
       - SECRET={{ stable_secret "floppy_secret" }}
