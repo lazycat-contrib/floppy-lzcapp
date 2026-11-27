@@ -1,5 +1,5 @@
 package: community.lazycat.app.floppy
-version: 26.11.19
+version: 26.11.26
 name: Floppy
 description: "Self-hosted all-in-one media tracker and Trakt alternative for movies, TV, anime, books, games, music, and podcasts."
 min_os_version: 1.5.0
